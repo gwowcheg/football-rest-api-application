@@ -1,0 +1,19 @@
+.hover-yellow:hover {
+    background-color: #f2f5ed;
+}
+
+.image-wrapper {
+    width: 100px;
+    display: block;
+    clear: both;
+}
+.team-container {
+    padding: 10px;
+}
+
+.team-container .container-fluid {
+}
+
+.player-name {
+    font-size: 20px;
+}

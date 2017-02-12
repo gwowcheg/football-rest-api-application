@@ -1,0 +1,35 @@
+<div class="container panel panel-default hover-blue team-container">
+  <div class="container-fluid">
+    <div class="col-sm-2">
+      <img class="image-wrapper" src="{{teamResult.crestURI}}"/>
+    </div>
+    <div class="col-sm-4">
+      <div>Team: {{teamResult.teamName}}</div>
+      <div>Position: {{teamResult.position}}</div>
+      <div>Played games: {{teamResult.playedGames}}</div>
+      <div>Wins: {{teamResult.wins}}</div>
+      <div>Draws: {{teamResult.draws}}</div>
+      <div>Losses: {{teamResult.losses}}</div>
+      <div>Points: {{teamResult.points}}</div>
+      <div>Goals: {{teamResult.goals}}</div>
+      <div>Goals against: {{teamResult.goalsAgainst}}</div>
+      <div>Goal difference: {{teamResult.goalDifference}}</div>
+    </div>
+    <div class="col-sm-3">
+      <div>Home games:</div>
+      <div>Wins: {{teamResult.home.wins}}</div>
+      <div>Draws: {{teamResult.home.draws}}</div>
+      <div>Losses: {{teamResult.home.losses}}</div>
+      <div>Goals: {{teamResult.home.goals}}</div>
+      <div>Goals against: {{teamResult.home.goalsAgainst}}</div>
+    </div>
+    <div class="col-sm-3">
+      <div>Away games:</div>
+      <div>Wins: {{teamResult.away.wins}}</div>
+      <div>Draws: {{teamResult.away.draws}}</div>
+      <div>Losses: {{teamResult.away.losses}}</div>
+      <div>Goals: {{teamResult.away.goals}}</div>
+      <div>Goals against: {{teamResult.away.goalsAgainst}}</div>
+    </div>
+  </div>
+</div>

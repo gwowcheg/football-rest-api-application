@@ -1,0 +1,10 @@
+<div class="container panel panel-default hover-grey" style="width: auto; padding: 10px;" data-toggle="collapse" attr.data-target="#player{{utils.trim(player.name)}}">
+  <div style="font-size: 20px">{{player.name}}</div>
+  <div id="player{{utils.trim(player.name)}}" class="collapse">
+    <div>Nationality: {{player.nationality ? player.nationality : 'N/A'}}</div>
+    <div>Number: {{player.jerseyNumber ? player.jerseyNumber : 'N/A'}}</div>
+    <div>Birth date: {{player.dateOfBirth ? player.dateOfBirth : 'N/A'}} </div>
+    <div>Contract until: {{player.contractUntil ? player.contractUntil : 'N/A'}}</div>
+    <div>Market value: {{player.marketValue ? player.marketValue : 'N/A'}}</div>
+  </div>
+</div>

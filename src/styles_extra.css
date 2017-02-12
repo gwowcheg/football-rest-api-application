@@ -1,0 +1,39 @@
+.hover-grey:hover {
+    background-color: #f2f5ed;
+}
+
+.view-team {
+  background-color: rgba(136,122,159,0.64);
+  border-color: rgba(39,23,52,0.64);
+}
+
+.hover-yellow:hover {
+  background-color: #f2f5ed;
+}
+
+.hover-blue:hover {
+  background-color: rgba(48,66,255,0.10);
+}
+
+.image-wrapper {
+  width: 100px;
+  display: block;
+  clear: both;
+  margin:5px;
+}
+.team-container {
+  padding: 15px;
+  margin: 5px;
+  width: 100%;
+}
+
+.team-container .container-fluid {
+}
+
+.team-name {
+  font-size: 20px;
+}
+
+.team-result {
+
+}

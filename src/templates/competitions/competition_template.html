@@ -1,0 +1,39 @@
+<div class="well" style="margin: 5px; padding: 5px; background-color: #D9D9D9">
+    <div class="panel-heading" style="background-color: rgba(180,180,180,0.64)">
+      <div>{{competition.caption}}</div>
+    </div>
+    <div class="panel-body" style="background-color: #ececec;">
+      <div>League: {{competition.league}}</div>
+      <div>Teams: {{competition.numberOfTeams}}</div>
+      <div>Games: {{competition.numberOfGames}}</div>
+      <br>
+      <div>
+        <a (click)="loadTeam()" href="#showTeams{{competition.id}}" data-toggle="collapse" class="btn btn-info" role="button" style="background-color: rgba(158,158,158,0.64); border-color: #666666">Participants</a>
+        <button (click)="loadLeagueResult()" class="btn btn-default" data-toggle="modal" attr.data-target="#leagueModal{{competition.id}}">Results</button>
+        <div id="showTeams{{competition.id}}" class="container collapse" style="width: auto; margin: auto; padding: inherit">
+          <team-span *ngFor="let team of teams" [team]="team" [competition]="competition"></team-span>
+        </div>
+        <div class="container">
+          <div class="modal fade" id="leagueModal{{competition.id}}" role="dialog">
+            <div class="modal-dialog" style="min-width: 1000px">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">{{competition.caption}}</h4>
+                </div>
+                <div class="modal-body">
+                  Match Day: <input type="number" (change)="setMatchDay($event)" value="{{matchDay}}" style="width: 50px">
+                  <div class="container" style="width:100%">
+                    <team-result-span *ngFor="let teamResult of teamResults" [teamResult]="teamResult"></team-result-span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

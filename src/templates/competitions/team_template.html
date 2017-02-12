@@ -1,0 +1,38 @@
+<div>
+  <div class="container panel panel-default hover-blue team-container" style="background-color: rgba(27, 0, 191, 0.34)">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          <img class="image-wrapper" src="{{team.crestUrl}}"/>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-name">{{team.name}}</div>
+          <div>Short name: {{team.shortName ? team.shortName : 'N/A'}}</div>
+          <div>Market value: {{team.squadMarketValue ? team.squadMarketValue : 'N/A'}}</div>
+          <button class="btn btn-default" (click)="loadPlayers()" data-toggle="modal" attr.data-target="#teamModal{{utils.trim(team.name)}}">Show players</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="color: black">
+    <div class="modal fade" id="teamModal{{utils.trim(team.name)}}" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">{{team.name}}</h4>
+            <div>Short name: {{team.shortName ? team.shortName : 'N/A'}}</div>
+            <div>Market value: {{team.squadMarketValue ? team.squadMarketValue : 'N/A'}}</div>
+          </div>
+          <div class="modal-body">
+            <div *ngIf="players.length == 0">Players List is not available.</div>
+            <player-span *ngFor="let player of players" [player]="player"></player-span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

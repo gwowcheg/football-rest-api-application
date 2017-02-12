@@ -1,0 +1,23 @@
+<div class="btn-group">
+  <scoreboard-competition-span class="btn btn-primary" *ngFor="let competition of competitions" (click)="selectCompetition(competition.id)" [competition]="competition"></scoreboard-competition-span>
+</div>
+Match Day: <input type="number" (change)="setDay($event)" value="{{day}}" style="margin-top: 20px;width: 50px">
+<table class="table table-bordered table-hover" style="margin-top: 20px; background-color: white">
+  <thead>
+  <tr style="background-color: rgba(0,1,224,0.12)">
+    <th>Team</th>
+    <th>Position</th>
+    <th>Played games</th>
+    <th>Wins</th>
+    <th>Draws</th>
+    <th>Losses</th>
+    <th>Points</th>
+    <th>Goals</th>
+    <th>Goals against</th>
+    <th>Goal difference</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="team-result" *ngFor="let teamResult of teamResults" [teamResult]="teamResult"></tr>
+  </tbody>
+</table>

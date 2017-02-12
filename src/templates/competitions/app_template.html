@@ -1,0 +1,33 @@
+<div class="container" style="background-color: rgba(0, 0, 0, 0.43)">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12" style="padding: 2px">
+        <div class="panel panel-default" style="background-color: rgba(51, 153, 153, 0.63); color: white;">
+          <div class="panel-body" style="font-size: 30px; text-align: center">Football application</div>
+        </div>
+      </div>
+      <div class="col-sm-12" style="padding: 5px">
+        <ul class="nav nav-tabs nav-tab">
+          <li class=""><a href="#" (click)="setYear(2015)">Season 2015</a></li>
+          <li class=""><a href="#" (click)="setYear(2016)">Season 2016</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3" style="padding: 2px">
+        <div class="well" style="margin: 5px; padding: 5px; background-color: #EEEEEE;">
+          <div class="list-group">
+            <a href="#" class="list-group-item {{menuSelected == 0 ? 'active' : ''}}" (click)="selectMenu(0)">Competitions</a>
+            <a href="#" class="list-group-item {{menuSelected == 1 ? 'active' : ''}}" (click)="selectMenu(1)">Score Board</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9" style="padding: 2px">
+          <div *ngIf="menuSelected == 0" class="well" style="margin: 5px; padding: 5px; background-color: #EEEEEE;">
+            <competition-span *ngFor="let competition of competitions" [competition]="competition"></competition-span>
+          </div>
+          <div *ngIf="menuSelected == 1" class="well" style="margin: 5px; padding: 5px; background-color: #EEEEEE;width: 100%">
+            <scoreboard-span [year]="year"></scoreboard-span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
